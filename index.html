@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%
+    }
+    button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;">The Family Book</h1><br><br><br><br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKnnoCiESBOS4EoBSzMWX_F2KqUFc5rt0gNWgHPNItyYzSWA7fkbpRQFQw0s&usqp=CAc" id="img">
+    <br>
+    <h3 style="text-align: center;" id="name"></h3>
+    <br><br>
+    <button onclick="Clicking()">Next</button>
+</body>
+<script>
+        var i = -1;
+   function Clicking() {
+        var fam_pics = [
+        "https://previews.123rf.com/images/jemastock/jemastock1705/jemastock170515455/79063313-father-dad-male-member-of-family-vector-illustration.jpg", 
+        'https://st2.depositphotos.com/3687485/11059/v/950/depositphotos_110597136-stock-illustration-mother-portrait-vector-illustration.jpg', 
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjYvBupat0S5vpOQA3dBWMsnaG1ybaalydIg&usqp=CAU', 
+        'download.png'
+    ]
+        var names = ['Manish Jindal', 'Sneh Jindal', 'Darsh Jindal', 'Divyansh Jindal']
+        if (i < 3) {
+            i++
+            document.getElementById('img').src = fam_pics[i];
+            document.getElementById('name').innerHTML = names[i];
+        }
+        else {
+            i = -1;
+            document.getElementById('img').src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbKnnoCiESBOS4EoBSzMWX_F2KqUFc5rt0gNWgHPNItyYzSWA7fkbpRQFQw0s&usqp=CAc';
+            document.getElementById('name').innerHTML = 'family book';
+        }
+
+   };
+    
+</script>
+</html>
